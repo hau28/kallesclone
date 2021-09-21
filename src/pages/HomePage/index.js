@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "../../components/Carousel";
 import { IntroduceSection } from "../../components/IntroduceSection";
 import MainLayout from "../../components/MainLayout";
+import { Space } from "../../components/Primitive";
+import { CategoryImg, FeaturedCategoriesGrid, GridItem } from "./style";
 
 const CAROUSEL = [
   {
@@ -20,6 +23,8 @@ const CAROUSEL = [
     bgUrl: "https://i.ibb.co/p4xqWdg/3.jpg",
   },
 ];
+
+const SHIRT = "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg";
 
 export default function HomePage() {
   const [carouselIndex, setCarouselIndex] = useState(-1);
@@ -41,6 +46,21 @@ export default function HomePage() {
           />
         ))}
       </Carousel>
+      <Space heightScale={4} />
+      <FeaturedCategoriesGrid>
+        <GridItem>
+          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
+        </GridItem>
+        <GridItem>
+          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
+        </GridItem>
+        <GridItem>
+          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
+        </GridItem>
+        <GridItem>
+          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
+        </GridItem>
+      </FeaturedCategoriesGrid>
     </MainLayout>
   );
 }

@@ -1,19 +1,20 @@
+import { useState } from "react";
 import Slider from "react-slick";
-import { IntroduceSection } from "../IntroduceSection";
 
 const settings = {
-  infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  fade: true,
+  autoplay: true,
 };
 
-export default function Carousel() {
+export default function Carousel(props) {
   return (
-    <Slider {...settings} style={{ overflowX: "hidden" }}>
-      <IntroduceSection />
-      <IntroduceSection />
-      <IntroduceSection />
-    </Slider>
+    <Slider
+      {...settings}
+      style={{ overflowX: "hidden", cursor: "grab" }}
+      {...props}
+    ></Slider>
   );
 }

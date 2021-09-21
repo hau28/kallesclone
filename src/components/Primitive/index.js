@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from "styled-components";
-import colors from "../../constants/colors";
 
 export const trans = css`
   transition: all 0.25s ease;
@@ -12,8 +11,24 @@ export const floatUpAnim = (show) => css`
   ${trans}
 `;
 
+export const floatSideAnim = (show, toLeft) => css`
+  transform: ${show
+    ? "translateX(0)"
+    : toLeft
+    ? "translateX(2rem)"
+    : "translateX(-2rem)"};
+  opacity: ${show ? 1 : 0};
+  ${trans}
+`;
+
 export const md = (style) => css`
   @media (min-width: 768px) {
+    ${style}
+  }
+`;
+
+export const lg = (style) => css`
+  @media (min-width: 992px) {
     ${style}
   }
 `;
@@ -61,4 +76,13 @@ export const ResponsiveFlex = styled.div`
 
 export const TopDiv = styled.div`
   z-index: ${({ zIndex = 1 }) => zIndex};
+`;
+
+export const StyledBlackButton = styled.button`
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 `;

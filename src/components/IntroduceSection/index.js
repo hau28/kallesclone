@@ -1,4 +1,4 @@
-import { StyledBlackButton, FloatHorzDiv } from "../Primitive";
+import { StyledBlackButton } from "../Button/style";
 import {
   StyledCollectionText,
   StyledContainer,

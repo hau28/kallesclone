@@ -4,6 +4,10 @@ export const trans = css`
   transition: all 0.25s ease;
 `;
 
+export const transSlow = css`
+  transition: all 1s ease;
+`;
+
 export const floatUpAnim = (show) => css`
   transform: ${show ? "translateY(0)" : "translateY(1rem)"};
   opacity: ${show ? 1 : 0};
@@ -76,13 +80,4 @@ export const ResponsiveFlex = styled.div`
 
 export const TopDiv = styled.div`
   z-index: ${({ zIndex = 1 }) => zIndex};
-`;
-
-export const StyledBlackButton = styled.button`
-  background-color: black;
-  color: white;
-  border: none;
-  font-weight: 500;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
 `;

@@ -3,10 +3,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "../../components/Carousel";
 import { IntroduceSection } from "../../components/IntroduceSection";
 import MainLayout from "../../components/MainLayout";
+import { CategoryPreview } from "../../components/Preview";
 import { Space } from "../../components/Primitive";
-import { CategoryImg, FeaturedCategoriesGrid, GridItem } from "./style";
+import { FeaturedCategoriesGrid, GridItem } from "./style";
 
-const CAROUSEL = [
+const carousel = [
   {
     season: "SUMMER 2020",
     collection: "New Arrival Collection",
@@ -24,8 +25,24 @@ const CAROUSEL = [
   },
 ];
 
-const SHIRT = "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg";
-
+const featuredCategories = [
+  {
+    title: "Women",
+    bgUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+  },
+  {
+    title: "Acessories",
+    bgUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+  },
+  {
+    title: "Footwear",
+    bgUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+  },
+  {
+    title: "Watches",
+    bgUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+  },
+];
 export default function HomePage() {
   const [carouselIndex, setCarouselIndex] = useState(-1);
   return (
@@ -33,11 +50,10 @@ export default function HomePage() {
       <Carousel
         onInit={() => setCarouselIndex(0)}
         afterChange={(i) => {
-          console.log(i);
           setCarouselIndex(i);
         }}
       >
-        {CAROUSEL.map((item, index) => (
+        {carousel.map((item, index) => (
           <IntroduceSection
             key={index}
             {...item}
@@ -46,20 +62,12 @@ export default function HomePage() {
           />
         ))}
       </Carousel>
-      <Space heightScale={4} />
       <FeaturedCategoriesGrid>
-        <GridItem>
-          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
-        </GridItem>
-        <GridItem>
-          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
-        </GridItem>
-        <GridItem>
-          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
-        </GridItem>
-        <GridItem>
-          <CategoryImg src="https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg" />
-        </GridItem>
+        {featuredCategories.map((category) => (
+          <GridItem>
+            <CategoryPreview {...category} />
+          </GridItem>
+        ))}
       </FeaturedCategoriesGrid>
     </MainLayout>
   );

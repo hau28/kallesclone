@@ -3,9 +3,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "../../components/Carousel";
 import { IntroduceSection } from "../../components/IntroduceSection";
 import MainLayout from "../../components/MainLayout";
-import { CategoryPreview } from "../../components/Preview";
+import { CategoryPreview, ItemPreview } from "../../components/Preview";
 import { Space } from "../../components/Primitive";
-import { FeaturedCategoriesGrid, GridItem } from "./style";
+import { SectionTitle } from "../../components/Typography";
+import { FeaturedCategoriesGrid, FeaturedGridItem, ItemsGrid } from "./style";
 
 const carousel = [
   {
@@ -43,6 +44,66 @@ const featuredCategories = [
     bgUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
   },
 ];
+
+const trendingItems = [
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+  {
+    title: "Analogue Resin Strap",
+    price: "$30.00",
+    isNew: true,
+    wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
+    bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
+  },
+];
+
 export default function HomePage() {
   const [carouselIndex, setCarouselIndex] = useState(-1);
   return (
@@ -64,11 +125,18 @@ export default function HomePage() {
       </Carousel>
       <FeaturedCategoriesGrid>
         {featuredCategories.map((category) => (
-          <GridItem>
+          <FeaturedGridItem>
             <CategoryPreview {...category} />
-          </GridItem>
+          </FeaturedGridItem>
         ))}
       </FeaturedCategoriesGrid>
+      <Space heightScale={12} />
+      <SectionTitle title="TRENDING" desc="Top view in this week" />
+      <ItemsGrid>
+        {trendingItems.map((item) => (
+          <ItemPreview {...item} />
+        ))}
+      </ItemsGrid>
     </MainLayout>
   );
 }

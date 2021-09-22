@@ -1,12 +1,13 @@
 import ContextBar from "../ContextBar";
 import NavBar from "../NavBar";
+import { MainLayoutContainer } from "./style";
 
 export default function MainLayout({ children }) {
   return (
-    <div>
+    <MainLayoutContainer>
       <ContextBar />
       <NavBar />
       {children}
-    </div>
+    </MainLayoutContainer>
   );
 }

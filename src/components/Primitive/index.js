@@ -20,6 +20,10 @@ export const transSlow = css`
   transition: all 1s ease;
 `;
 
+export const customTrans = (duration = 0.5) => css`
+  transition: all ${duration}s ease;
+`;
+
 export const contentWidth = css`
   max-width: 1140px;
   align-self: center;

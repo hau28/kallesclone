@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { WhiteButton } from "../Button/style";
-import { transSlow } from "../Primitive";
+import { customTrans, trans, transSlow } from "../Primitive";
 
 export const CategoryPreviewContainer = styled.div`
   width: 100%;
@@ -39,24 +39,6 @@ export const ItemPreviewContainer = styled.div`
   background: blue;
 `;
 
-export const ItemImg = styled.div`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background: url("https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg");
-  background-position: center;
-  background-size: cover;
-  &:hover {
-    transform: scale(1.25);
-    opacity: 1;
-  }
-  ${transSlow}
-`;
-
 export const ItemWrap = styled.img`
   width: 100%;
   height: 100%;
@@ -72,4 +54,44 @@ export const ItemTitle = styled.p`
 
 export const ItemPrice = styled.p`
   color: gray;
+`;
+
+export const OnHoverContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    opacity: 1;
+  }
+  ${transSlow}
+`;
+
+export const ItemImg = styled.div`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: url("https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg");
+  background-position: center;
+  background-size: cover;
+  ${(props) =>
+    props.hover
+      ? css`
+          transform: scale(1.25);
+          opacity: 1;
+        `
+      : null}
+
+  ${transSlow}
 `;

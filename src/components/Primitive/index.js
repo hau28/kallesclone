@@ -101,3 +101,9 @@ export const ResponsiveFlex = styled.div`
 export const TopDiv = styled.div`
   z-index: ${({ zIndex = 1 }) => zIndex};
 `;
+
+export const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: gainsboro;
+`;

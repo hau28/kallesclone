@@ -1,15 +1,21 @@
 import styled, { css } from "styled-components";
+import { colors } from "../../constants/colors";
 import { trans } from "../Primitive";
 
 export const IconButton = styled.button`
   background-color: transparent;
   margin: 0;
   border: none;
-  font-size: 1.5rem;
+  font-size: ${({ fontSize = "1.5rem" }) => fontSize};
   opacity: 0.75;
   padding: 0rem 0.5rem 0.5rem 0.5rem;
   cursor: pointer;
   z-index: 1;
+  transform: rotate(0deg);
+  &:hover {
+    transform: rotate(${({ rotate }) => (rotate ? "180deg" : "0deg")});
+  }
+  ${trans}
 `;
 
 export const StyledBlackButton = styled.button`
@@ -73,4 +79,15 @@ export const ItemActionContent = styled.span`
         `
       : null}
   ${trans}
+`;
+
+export const PrimaryButton = styled.button`
+  border: none;
+  background-color: ${colors.primary};
+  border-radius: 999px;
+  padding: 0.75rem;
+  font-weight: 500;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
 `;

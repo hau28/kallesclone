@@ -5,7 +5,7 @@ import Brand from "../Brand";
 import { Row, Space } from "../Primitive";
 import { IconButton } from "../Button/style";
 
-export default function NavBar() {
+export default function NavBar({ onClickCart }) {
   return (
     <StyledNavBar>
       <IconButton>
@@ -17,7 +17,11 @@ export default function NavBar() {
         </IconButton>
         <Space />
         <IconButton>
-          <IoCartOutline />
+          <IoCartOutline
+            onClick={() => {
+              onClickCart();
+            }}
+          />
         </IconButton>
       </Row>
       <StyledBrandRow>

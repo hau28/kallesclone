@@ -4,8 +4,11 @@ import { IoSearchOutline, IoCartOutline } from "react-icons/io5";
 import Brand from "../Brand";
 import { Row, Space } from "../Primitive";
 import { IconButton } from "../Button/style";
+import { useDispatch } from "react-redux";
+import { openCart } from "../../redux/Cart/actions";
 
-export default function NavBar({ onClickCart }) {
+export default function NavBar() {
+  const dispatch = useDispatch();
   return (
     <StyledNavBar>
       <IconButton>
@@ -19,7 +22,7 @@ export default function NavBar({ onClickCart }) {
         <IconButton>
           <IoCartOutline
             onClick={() => {
-              onClickCart();
+              dispatch(openCart());
             }}
           />
         </IconButton>

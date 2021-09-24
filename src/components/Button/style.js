@@ -14,6 +14,12 @@ export const IconButton = styled.button`
   transform: rotate(0deg);
   &:hover {
     transform: rotate(${({ rotate }) => (rotate ? "180deg" : "0deg")});
+    ${(props) =>
+      props.primaryIcon
+        ? css`
+            color: ${colors.primary};
+          `
+        : null};
   }
   ${trans}
 `;
@@ -90,4 +96,30 @@ export const PrimaryButton = styled.button`
   color: white;
   font-size: 0.8rem;
   letter-spacing: 3px;
+`;
+
+export const SecondaryButton = styled(PrimaryButton)`
+  background-color: whitesmoke;
+  color: black;
+`;
+
+export const PrimaryIconButton = styled.span`
+  &:hover {
+    color: ${colors.primary};
+    cursor: pointer;
+  }
+`;
+
+export const QuantityButtonContainer = styled.div`
+  border: solid 1px black;
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+`;
+
+export const QuantityText = styled.span`
+  font-weight: 700;
 `;

@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import { colors } from "../../constants/colors";
 
 export const md = (style) => css`
   @media (min-width: 768px) {
@@ -103,7 +104,7 @@ export const TopDiv = styled.div`
 `;
 
 export const Divider = styled.div`
-  width: 100%;
-  height: 1px;
+  height: 10px;
+  align-self: stretch;
   background-color: gainsboro;
 `;

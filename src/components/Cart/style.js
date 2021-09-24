@@ -9,7 +9,7 @@ export const ItemList = styled.div`
 
 export const CartItemContainer = styled.div`
   display: flex;
-  padding: 1.25rem 0 1.25rem 1.25rem;
+  padding: 1.25rem;
 `;
 
 export const CartItemImg = styled.img`

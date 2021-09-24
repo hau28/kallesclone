@@ -14,6 +14,8 @@ import {
 import { FiEye } from "react-icons/fi";
 import { IoCartOutline } from "react-icons/io5";
 import { HoverItemButton } from "../Button";
+import { useDispatch } from "react-redux";
+import { addToCart, openCart } from "../../redux/Cart/actions";
 
 export function CategoryPreview({ title, bgUrl }) {
   return (
@@ -28,6 +30,8 @@ export function ItemPreview({ title, price, isNew, sale, bgUrl, wrapUrl }) {
   const quickViewHoverState = useState(false);
   const quickShopHoverState = useState(false);
   const [containerHover, setContainerHover] = useState(false);
+  const dispatch = useDispatch();
+
   return (
     <div>
       <ItemPreviewContainer
@@ -57,13 +61,24 @@ export function ItemPreview({ title, price, isNew, sale, bgUrl, wrapUrl }) {
             }}
             hoverState={quickShopHoverState}
             IconComponent={IoCartOutline}
+            onClick={() => {
+              dispatch(
+                addToCart({
+                  imgUrl: wrapUrl,
+                  name: title,
+                  price: price,
+                  quantity: 1,
+                })
+              );
+              dispatch(openCart());
+            }}
           >
             Quick Shop
           </HoverItemButton>
         </OnHoverContainer>
       </ItemPreviewContainer>
       <ItemTitle>{title}</ItemTitle>
-      <ItemPrice>{price}</ItemPrice>
+      <ItemPrice>${price}</ItemPrice>
     </div>
   );
 }

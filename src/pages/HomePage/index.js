@@ -48,56 +48,56 @@ const featuredCategories = [
 const trendingItems = [
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
   },
   {
     title: "Analogue Resin Strap",
-    price: "$30.00",
+    price: "30.00",
     isNew: true,
     wrapUrl: "https://i.ibb.co/3m43rrS/hmgoepprod-1.jpg",
     bgUrl: "https://i.ibb.co/dDwtLtN/hmgoepprod-3.jpg",
@@ -133,7 +133,7 @@ export default function HomePage() {
       <Space heightScale={12} />
       <SectionTitle title="TRENDING" desc="Top view in this week" />
       <ItemsGrid>
-        {trendingItems.map((item) => (
+        {trendingItems.map((item, i) => (
           <ItemPreview {...item} />
         ))}
       </ItemsGrid>

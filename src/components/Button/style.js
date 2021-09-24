@@ -103,11 +103,15 @@ export const SecondaryButton = styled(PrimaryButton)`
   color: black;
 `;
 
-export const PrimaryIconButton = styled.span`
+export const abstractIconButton = css`
   &:hover {
     color: ${colors.primary};
     cursor: pointer;
   }
+`;
+
+export const PrimaryIconButton = styled.span`
+  ${abstractIconButton}
 `;
 
 export const QuantityButtonContainer = styled.div`

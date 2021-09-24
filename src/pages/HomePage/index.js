@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "../../components/Carousel";
 import { IntroduceSection } from "../../components/IntroduceSection";
-import MainLayout from "../../components/MainLayout";
+import { MainLayout } from "../../components/MainLayout";
 import { CategoryPreview, ItemPreview } from "../../components/Preview";
 import { Space } from "../../components/Primitive";
 import { SectionTitle } from "../../components/Typography";
@@ -134,7 +134,7 @@ export default function HomePage() {
       <SectionTitle title="TRENDING" desc="Top view in this week" />
       <ItemsGrid>
         {trendingItems.map((item, i) => (
-          <ItemPreview {...item} />
+          <ItemPreview {...item} id={i} />
         ))}
       </ItemsGrid>
     </MainLayout>

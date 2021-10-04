@@ -1,7 +1,7 @@
 import { QuantityButton } from "../Button";
 import { IconButton, PrimaryButton, SecondaryButton } from "../Button/style";
 import AppDrawer from "../Drawer";
-import { Row, Space } from "../Primitive";
+import { Row, Space } from "../Common";
 import {
   CartItemContainer,
   CartItemImg,

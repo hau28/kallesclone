@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Space } from "../Primitive";
+import { Space } from "../Common";
 import {
   CategoryButton,
   CategoryImg,

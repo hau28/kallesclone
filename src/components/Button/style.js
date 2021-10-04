@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors } from "../../constants/colors";
-import { trans } from "../Primitive";
+import { trans } from "../Common";
 
 export const IconButton = styled.button`
   background-color: transparent;

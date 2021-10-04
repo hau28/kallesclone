@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { A, floatUpAnim } from "../Primitive";
+import { A, floatUpAnim } from "../Common";
 
 export const StyledDropdownList = styled.div`
   position: absolute;

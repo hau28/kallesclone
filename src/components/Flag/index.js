@@ -1,4 +1,4 @@
-import { Row, Space } from "../Primitive";
+import { Row, Space } from "../Common";
 import ReactCountryFlag from "react-country-flag";
 
 export function WithFlag({ text }) {

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { contentWidth, md, responsiveGrid } from "../../components/Primitive";
+import { contentWidth, md, responsiveGrid } from "../../components/Common";
 
 export const FeaturedCategoriesGrid = styled.div`
   ${responsiveGrid}

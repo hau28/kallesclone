@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { md, lg, floatSideAnim } from "../Primitive";
+import { md, lg, floatSideAnim } from "../Common";
 import { Container } from "react-bootstrap";
 
 export const StyledIntroduceSection = styled.div`

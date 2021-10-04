@@ -1,5 +1,5 @@
 import { FiChevronDown } from "react-icons/fi";
-import { Row, Space, TopDiv } from "../Primitive";
+import { Row, Space, TopDiv } from "../Common";
 import { StyledDropdownItem, StyledDropdownList } from "./style";
 import { useState } from "react";
 

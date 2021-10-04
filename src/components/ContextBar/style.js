@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ResponsiveFlex } from "../Primitive";
+import { ResponsiveFlex } from "../Common";
 
 export const StyledContextBar = styled(ResponsiveFlex)`
   background-color: whitesmoke;

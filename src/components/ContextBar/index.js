@@ -6,7 +6,7 @@ import {
   Tomato,
   A,
   AbsoluteCenterRow,
-} from "../Primitive";
+} from "../Common";
 import { StyledContextBar, StyledContextBarCenter } from "./style";
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";

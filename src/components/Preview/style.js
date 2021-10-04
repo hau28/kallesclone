@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { WhiteButton } from "../Button/style";
-import { customTrans, trans, transSlow } from "../Primitive";
+import { customTrans, trans, transSlow } from "../Common";
 
 export const CategoryPreviewContainer = styled.div`
   width: 100%;

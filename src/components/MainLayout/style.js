@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { abstractIconButton } from "../Button/style";
-import { trans } from "../Primitive";
+import { trans } from "../Common";
 
 export const MainLayoutContainer = styled.div`
   background-color: white;

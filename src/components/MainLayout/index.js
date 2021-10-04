@@ -12,7 +12,7 @@ import { openCart } from "../../redux/Cart/actions";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import { Container } from "react-bootstrap";
 import { GrFormNext } from "react-icons/gr";
-import { Space } from "../Primitive";
+import { Space } from "../Common";
 
 export function MainLayout({ children }) {
   return (

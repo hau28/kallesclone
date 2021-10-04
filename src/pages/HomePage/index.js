@@ -4,7 +4,7 @@ import Carousel from "../../components/Carousel";
 import { IntroduceSection } from "../../components/IntroduceSection";
 import { MainLayout } from "../../components/MainLayout";
 import { CategoryPreview, ItemPreview } from "../../components/Preview";
-import { Space } from "../../components/Primitive";
+import { Space } from "../../components/Common";
 import { SectionTitle } from "../../components/Typography";
 import { FeaturedCategoriesGrid, FeaturedGridItem, ItemsGrid } from "./style";
 

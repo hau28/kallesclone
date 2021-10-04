@@ -36,7 +36,6 @@ export const ItemPreviewContainer = styled.div`
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  background: blue;
 `;
 
 export const ItemWrap = styled.img`
